@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html
+xmlns="http://www.w3.org/1999/xhtml"><head> <meta
+http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Transit Light Curve Tutorial</title> <link
+href="../defaultstyles1.css" rel="stylesheet"
+media="screen"> <script type="text/javascript" async=""
+src="../ga.js"></script><script type="text/javascript"
+src="../branding.js"></script> <script
+type="text/JavaScript" src="../curvycorners.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-37759371-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() { var ga = document.createElement('script'); ga.type =
+  'text/javascript'; ga.async = true; ga.src = ('https:' ==
+  document.location.protocol ? 'https://ssl' : 'http://www') +
+  '.google-analytics.com/ga.js'; var s =
+  document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s);
+  })();
+  }
+</script> </head>
+
+<body> <div id="container"> <br> <div id="wrapper"> <div id="banner">
+<h1>Transit Light Curve Tutorial</h1> <p><a
+href="../index.html" style="color:
+#FFFFFF; font-size: 12pt; text-transform:none">Andrew Vanderburg
+</a></p><br><br><br><br><br>
+<br><br> </div> <div id="nav"> <ul> <li><a
+href="tutorial.html">Introduction</a></li>
+<li><a
+href="tutorial2.html">Transit Light Curves</a></
+li> <li><a
+href="tutorial3.html">Accessing and Downloading <i>Kepler</i> Data</a></li>
+<li><a
+href="tutorial4.html">Analyzing <i>Kepler</i> Data </a></li>
+
+
+
+
+        </ul> </div> <div id="page">
+
+        <div id="content">
+        <br>
+
+        <center><h1>Analyzing <i>Kepler</i> Data</h1></center>
+<br>
+        <p>This section will walk through an analysis of K2 data using online plotting tools and publicly available K2 data. We will focus on a planetary system around a star called HIP 41378, which was discovered in K2 data in 2016. 
+        
+        </p> 
+        <center><h2>Plotting K2 Data Online</h2></center>
+        <p>
+        In this tutorial, we will be using an online plotting program called <a href='https://plot.ly/'>plot.ly</a>. Plot.ly is free, but requires the creation of an account. Once you have created an account and logged in, the following welcome screen is shown. To create a new plot, click the "Create" button: 
+        </p>
+        
+        <center><img src='plotly1.png' width=900></center>
+        <p>
+        Creating a new plot will bring you to a new work area with several sub-frames. At the top right is an area to input data, at the lower right is the plot itself, and on the left is a menu with options for modifying the plot itself. The first thing we need to do is upload data to plot. For this, we will use the publicly available K2 data of HIP 41378, which is also known by its EPIC ID number 211311380. The data is available <a href='http://archive.stsci.edu/missions/hlsp/k2sff/c05/211300000/11380/hlsp_k2sff_k2_lightcurve_211311380-c05_kepler_v1_llc-default-aper.txt'>here</a>, or can be accessed using the search form as described on <a href='tutorial3.html'>Page 3</a> of this tutorial. Once you have downloaded the data, click the "Upload" button in the top right of the screen, as shown below: 
+        
+        </p>
+        
+        <center><img src='plotly2.png' width=900></center>
+        <p>
+        
+        Once you have uploaded the data, two columns will be filled with values in the top right part of the screen. These columns will have the headings "BJD - 2454833" and "Corrected Flux". The column called "BJD - 2454833" gives the time of each observation. BJD, or Barycentric Julian Day, is a way of measuring time commonly used by astronomers. To find when these observations were taken, take any value from that column, for example the first timestamp 2307.55049, and add to this the number 2454833. The full BJD at that timestamp is 2457140.55049. Using an <a href='https://www.aavso.org/jd-calculator'>online tool</a>, it is possible to convert BJDs into dates and times. Pasting 2457140.55049 into the box that says "Julian Date" and clicking "Compute Calendar Date" gives a result of April 28, 2015 at	1:12:42 AM Greenwich Mean Time. Afterwards, <i>Kepler</i> continued observing HIP 41378 nearly continuously until July 10, 2015. The column called "Corrected Flux" gives the measured brightness of the star at each of these times. The description "Corrected" means that apparent changes in brightness due to the peculiarities of how K2 works have been removed. </p>
+        
+        <p> To create a plot, in the region to the left of the screen, fill in the "X" and "Y" boxes, shown highlighted below, with the "BJD-2454833" and "Corrected Flux" columns. You can also create or edit the title of the graph. 
+
+</p>
+        
+        <center><img src='plotly3.png' width=900></center>
+        <p>
+		When completed, there should be a plot of the K2 light curve in the bottom right part of the screen. 
+        </p>
+        
+        <center><img src='plotly4.png' width=900></center>
+        <p>
+        It is possible to zoom in on features in the light curve by clicking and dragging over the areas of interest. 
+        </p>
+        
+        <center><h2>Studying the HIP 41378 Planetary System</h2></center>
+        
+        <p>Below is an embedded Plot.ly plot of the K2 light curve of HIP 41378. This light curve shows a slow slope upwards (which is unimportant), and several dips throughout the light curve caused by transiting planets. 
+        </p>
+        
+        <center><iframe width="900" height="800" frameborder="0" scrolling="no" src="https://plot.ly/~andrew418/3.embed"></iframe></center>
+    
+    	<p>The first transit that jumps out is the deep one at BJD-2454833 = 2355. Zoom in on this transit and take a closer look. The top of the transit is at a flux level of about 1.00145 and the bottom of the transit is at a flux of about 0.9964. The transit depth is therefore 1.00145 - 0.9964 = 0.00505. From the first page of this tutorial, we therefore know that the ratio of the planet's radius to the star's radius is the square root of 0.00505, or 0.07106. But before we can measure the planet's size, we need to know the radius of the star.</p>
+    	
+    	<p> Fortunately, estimates of the radius of most stars observed by K2 have been made by astronomers and are available online. These radius estimates are available <a href='http://archive.stsci.edu/k2/epic/search.php'>via a search form linked here</a>. To get the stellar radius estimate, type in the EPIC ID, or name of the star, or sky coordinates: 
+    	</p>
+        
+        <center><img src='epicsearch1.png' width=900></center>
+        <p>
+        
+        After submitting the form, results come up with lots of information about the star HIP 41378, including its brightness and other names: 
+        </p>
+        
+        <center><img src='epicsearch2.png' width=900></center>
+        <p>
+        
+        Scrolling all the way to the right shows a column giving the radius of the star. This estimate gives a radius of 1.506 times the size of the Sun. 
+    	        </p>
+        
+        <center><img src='epicsearch3.png' width=900></center>
+        <p>
+        
+        If we use a stellar radius of 1.5 times the size of the Sun, we get a planetary radius of <a href='http://www.wolframalpha.com/input/?i=sqrt(1.00145+-+0.9964)+*+1.506+*+radius+of+sun'>about the size of Jupiter</a>. This planet is likely a massive gas giant like Jupiter or Saturn in our own solar system.   
+    	</p>
+    	
+    	<p>
+    	But what is the orbital period of this planet? There are no other transits that are as deep and long-duration in the light curve, so its orbital period must be longer than about 40 days, or we would have seen another transit! It is difficult to constrain the period of a planet with only a single transit, but a careful analysis of the system concludes the orbital period of this planet is probably close to about 1 year - a similar orbit to the Earth. Recently, <a href='https://archive.stsci.edu/prepds/k2sff/html/c18/ep211311380.html'>more observations from <i>Kepler</i></a> and telescopes on the ground  <a href='https://arxiv.org/abs/1911.07355'>measured the period to be 542 days</a>, or about 18 months. 
+    	</p>
+    	
+    	The light curve of HIP 41378 contains much more than just a single transiting planet. Take a careful look at the light curve, see how many transits there are, and try to figure out how many exoplanets orbit HIP 41378. Then, compare your results with what scientists determined after studying these planets, by reading <a href='http://aasnova.org/2016/08/08/k2s-first-five-planet-system/'>this summary</a>. 	
+        </div> </div> </div> <div id="footer"> </div> </div>
+
+
+</body></html>

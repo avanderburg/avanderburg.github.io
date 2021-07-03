@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html
+xmlns="http://www.w3.org/1999/xhtml"><head> <meta
+http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Transit Light Curve Tutorial</title> <link
+href="../defaultstyles1.css" rel="stylesheet"
+media="screen"> <script type="text/javascript" async=""
+src="../ga.js"></script><script type="text/javascript"
+src="../branding.js"></script> <script
+type="text/JavaScript" src="../curvycorners.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-37759371-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() { var ga = document.createElement('script'); ga.type =
+  'text/javascript'; ga.async = true; ga.src = ('https:' ==
+  document.location.protocol ? 'https://ssl' : 'http://www') +
+  '.google-analytics.com/ga.js'; var s =
+  document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s);
+  })();
+  }
+</script> </head>
+
+<body> <div id="container"> <br> <div id="wrapper"> <div id="banner">
+<h1>Transit Light Curve Tutorial</h1> <p><a
+href="https://www.cfa.harvard.edu/%7Eavanderb/index.html" style="color:
+#FFFFFF; font-size: 12pt; text-transform:none">Andrew Vanderburg
+</a></p> </div> <div id="nav"> <ul> <li><a
+href="tutorial.html">Introduction</a></li>
+<li><a
+href="tutorial2.html">Transit Light Curves</a></
+li> <li><a
+href="tutorial3.html">Accessing and Downloading <i>Kepler</i> and K2 Data</a></li>
+<li><a
+href="tutorial4.html">Analyzing <i>Kepler</i> and K2 Data </a></li>
+
+
+
+        </ul> </div> <div id="page">
+
+        <div id="content">
+        <br>
+
+        <center><h1>The Transit Light Curve</h1></center>
+<br>
+        <p>In this section, we will show a light curve from the <i>Kepler</i> mission and determine planet parameters. <i>Kepler</i> is the most powerful planet-hunting observatory we have today, and the best part is that the data is all public. The figure below shows a <i>Kepler</i> light curve of an exoplanet called <a href='https://en.wikipedia.org/wiki/HAT-P-7b'>HAT-P-7 b</a>.<p> This planet is a hot Jupiter - one of the easiest types of planets to detect.         
+        <center><img src='hatp7.png'></center>
+            
+        <p>
+        First of all, notice the scale of the plot above. The entire span of the graph is within 1% of the total brightness of the star! Searching for transiting planets requires highly precise brightness measurements. </p>
+        
+        <center><img src='hatp7scale.png'></center>
+        <p> 
+        The <i>Kepler</i> light curve of HAT-P-7 shows three very convincing transits - the large dips highlighted with red arrows below. 
+        </p> 
+        
+        <center><img src='hatp7transits.png'></center>
+        <p>
+        The depth of these transits encodes the size of the planet. </p>
+        
+        <center><img src='hatp7depth.png'></center>
+        <p>Here, the transits decrease the flux from 1.0 to about 0.994 - a decrease of about 0.6%. Using the formula for the planetary radius:</p>
+        
+        <center><img src='rpdepth.png'></center>
+        <p>
+        and plugging in values for depth = 0.6% = 0.006,<a href='https://arxiv.org/abs/1407.7516'> <i>R<sub>*</sub></i> = 2 solar radii</a>, we find a planetary radius <i>R<sub>p</sub></i> of about <a href='http://www.wolframalpha.com/input/?i=2+*+radius+of+sun+*+sqrt(0.006)'>1.5 Jupiter radii</a>.
+        
+        </p>
+        
+        
+        <p>The amount of time between two successive transits is the "orbital period" of the planet, which is the length of that planet's year: </p>
+        
+        <center><img src='hatp7period.png'></center>
+        
+        
+        <p>
+        When the planet goes behind the star, any light from the planet, either starlight reflected off the planet's surface, or light being emitted by the planet because it is glowing hot, is blocked. This decrease in brightness is called the "secondary eclipse", and for planets is usually quite small. </p>
+        
+        <center><img src='hatp7secondary.png'></center>
+        
+        It is barely detectable by eye, but if you stack many of these eclipses together and average the data, it is quite apparent. The average secondary eclipse of HAT-P-7 b using the entire <i>Kepler</i> data is shown below. The grey points and purple points are averages over 1 minute and 15 minute intervals, respectively:  
+        </p>
+        
+        <center><img src='koi2sec.png'></center>
+        
+        <p> The duration of the transit is the time it takes for the planet to cross over the face of the star. This measurement encodes many observables, including the "impact parameter", or how close to the center of the star the planet transits, the size of the star (or more precisely, how dense the star is), and the eccentricity of the planet's orbit, or how close to a circle the planet's orbit is. It is difficult to disentangle these different measurements, but with sophisticated analyses, it is possible. </p>
+
+
+<center><img src='hatp7duration.png'></center>
+		<p>
+		The figure below gives a closer look at the transit light curve. Here, the grey points are again averaged data, this time averages over 20 second intervals, using data from about 6% the full dataset. 
+		
+		<center><img src='koi2nomodel.png'></center>
+		
+		Upon closer inspection of the transit light curve, a few things are evident. First, the transit is not flat-bottomed, it is round-bottomed. This is because stars are not uniformly bright over their surfaces. Stars have a property called "limb darkening", which means that the star is brightest at the center from our view, and faintest at the edge of the view. This is illustrated in the following image of our Sun, obtained by NASA's Solar and Heliospheric Observatory. 	
+		</p>        
+		<center><img src='limbdarkening.jpg' width=600><br>Image: NASA</br></center>
+		<p>
+		The rounded profile comes from the planet moving across parts of the star with different brightness - when the planet is near the edge of the star, it blocks part of the star that is least bright, so it blocks the less total light. This is illustrated in the following animation: 
+		
+		</p>
+		
+		<center><img src='HAT-P-3b.gif' width=600><br>Animation: Jason Eastman</br></center>
+		<p>
+		Another interesting feature is that the decrease in brightness into transit is not instantaneous - it takes some time for the planet to pass fully over the edge of the star. This is also illustrated in the animation above. </p>
+		
+		<p> Astronomers usually distinguish between two different transit durations: the "total duration" <i>t<sub>t</sub></i>, from the beginning of the decrease in brightness to the end of the rise, and the "full duration", <i>t<sub>t</sub></i>, the amount of time the planet is fully over the surface of the star. The figure below annotates these two different duration measurements. </p>
+		
+		<center><img src='koi2nomodeldurations.png'></center>
+		
+		<p>
+		
+		 The ratio between <i>t<sub>t</sub></i> and <i>t<sub>t</sub></i>, when combined with other information like the depth of the transit, gives information about how far from the center of the star the planet transits. Usually, astronomers extract this information by calculating what the transit should look like and comparing that to the observations. This approach, called modeling, results in calculations that very closely match the observed data. A model light curve is shown in purple in the figure below, on top of the data of HAT-P-7 b. </p>
+		
+		<center><img src='koi2.png'></center>
+		
+		
+		<p>
+		Continue onto <a href = 'tutorial3.html'> Page 3 </a>. 
+		</p>
+		
+		
+		
+        </div> </div> </div> <div id="footer"> </div> </div>
+
+
+</body></html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html
+xmlns="http://www.w3.org/1999/xhtml"><head> <meta
+http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Transit Light Curve Tutorial</title> <link
+href="../defaultstyles1.css" rel="stylesheet"
+media="screen"> <script type="text/javascript" async=""
+src="../ga.js"></script><script type="text/javascript"
+src="../branding.js"></script> <script
+type="text/JavaScript" src="../curvycorners.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-37759371-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() { var ga = document.createElement('script'); ga.type =
+  'text/javascript'; ga.async = true; ga.src = ('https:' ==
+  document.location.protocol ? 'https://ssl' : 'http://www') +
+  '.google-analytics.com/ga.js'; var s =
+  document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s);
+  })();
+  }
+</script> </head>
+
+<body> <div id="container"> <br> <div id="wrapper"> <div id="banner">
+<h1>Transit Light Curve Tutorial</h1> <p><a
+href="../index.html" style="color:
+#FFFFFF; font-size: 12pt; text-transform:none">Andrew Vanderburg
+</a></p><br><br><br><br><br>
+<br><br> </div> <div id="nav"> <ul> <li><a
+href="tutorial.html">Introduction</a></li>
+<li><a
+href="tutorial2.html">Transit Light Curves</a></
+li> <li><a
+href="tutorial3.html">Accessing and Downloading <i>Kepler</i> and K2 Data</a></li>
+<li><a
+href="tutorial4.html">Analyzing <i>Kepler</i> and K2 Data </a></li>
+
+
+
+
+        </ul> </div> <div id="page">
+
+        <div id="content">
+        <br>
+
+        <center><h1>Introduction</h1></center>
+<br>
+        <p><img src='lhs1140image.jpg' align='right' width=400 style="padding:15px;">
+We are fortunate to live in a time not only of great
+        discoveries and advancements in the field of exoplanet science,
+        but to live in a time when the most cutting-edge data for
+        studying these planets is freely available for anyone to
+        download off the internet. This webpage is designed to give an introduction to how we find planets using the "transit method," one of the most common methods for detecting exoplanets today, and the method used by the <a href='https://www.nasa.gov/mission_pages/kepler/overview/index.html'><i>Kepler</i> space telescope.</a> This tutorial will then teach the reader how to download <i>Kepler</i> data (in particular data from the new K2 mission), look for planets in it, and learn the planetary properties using tools available in any modern web browser. 
+        
+        
+        </p> 
+        
+        <h2>What are exoplanets?</h2>
+        <p>
+        Exoplanets are planets, much like the ones orbiting our sun, that we have discovered to be orbiting planets other than our Sun. The first exoplanets were found in the late 20th century (in <a href='https://en.wikipedia.org/wiki/HD_114762_b'>1989</a>, <a href='https://en.wikipedia.org/wiki/PSR_B1257%2B12'>1992</a>, or <a href='https://en.wikipedia.org/wiki/51_Pegasi_b'>1995</a>, depending on ones definition of an exoplanet), and since then we have discovered thousands of these worlds orbiting other stars in the galaxy. While many exoplanets mirror the planets we know of in our own Solar System, many exoplanets are hard to recognize - including giant exoplanets orbiting extremely close to their host stars (called <a href='https://en.wikipedia.org/wiki/Hot_Jupiter'>Hot Jupiters</a>) to planets larger than Earth, smaller than Neptune, and likely rich in volatile materials (called <a href='https://en.wikipedia.org/wiki/Super-Earth'>super-Earths</a> or <a href='https://en.wikipedia.org/wiki/Mini-Neptune'>mini-Neptunes</a>), and planets which instead of orbiting one host star are found around two very closely orbiting stars (called <a href='https://en.wikipedia.org/wiki/Circumbinary_planet'>circumbinary planets</a>). 
+        
+        </p>
+        
+        <h2>What are transiting exoplanets?</h2>
+        <p>
+        There are several ways that we have at our disposal to detect exoplanets. Historically, many of the first exoplanets to be discovered were found via the <i>radial velocity</i> method. Using super-precise and ultra-well calibrated instruments, astronomers searched for the tiny wobble in the star's speed caused by the planet's orbit. Other methods at exoplanet astronomers' disposals include detecting gravitational lensing due to a planet (called the <i>microlensing method</i>), searching for the wobble in the star's position on the sky (called the <i>astrometric method</i>), and separating the light of the star from the planet and actually taking images (called the <i>direct imaging method</i>).</p>
+        <p> This tutorial focuses on the <i>transit method</i>, where we search for the period dimming of light as an exoplanet passes in front of its host star and casts its shadow on our telescopes. An animation below illustrates what happens when a planet transits:  
+        </p>
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/8v4SRfmoTuU" frameborder="0" allowfullscreen></iframe><br> Animation credit: NASA</center>
+
+		<p>
+		In this animation, the green line tracing below the planet and star is called the "light curve." The light curve is a graph the brightness of the star over time, and is the measurement <i> Kepler</i> makes to discover exoplanets. The dip in light that happens when the planet passes in front of the star is called the "transit." Transits give information about the planet's size and orbit. The animation below shows a planet transiting three times successively before the transits are detected by <i>Kepler</i>:
+		</p>
+		<center><iframe width="560" height="315" src="https://www.youtube.com/embed/slJU_ehnDAc" frameborder="0" allowfullscreen></iframe><br> Animation credit: NASA</center>
+		<p>The length of time between each transit is the planet's "orbital period", or the length of a year on that particular planet. Not all planets have years as long as a year on the Earth! Some planets discovered by <i>Kepler</i> orbit around their stars so quickly that their years only last about four hours! </p>
+		<p>
+		Perhaps the most important aspect of transiting planets is that you can measure the planet's size. This measurement is extremely difficult to make if the planet does not happen to transit. The amount of light a planet blocks in transit depends on the size of the planet. A large planet blocks more light than a small planet, so the large planet will have a deeper transit. This is illustrated in the animation below: 
+		
+		
+				
+		</p>
+		        
+        <p><center><img src='transitgif2.gif'><br> Animation credit: NASA</center></p>
+
+		<p>
+		
+Measuring the transit depth is not enough to measure the size of the planet - you also need to know the size of the star it is transiting. The image below illustrates how a planet transiting a small star (on the right) causes a larger transit signal than the same sized planet transiting a large star on the left:		
+		</p>
+		
+		<center><img src='starsizedepth.png'><br>Image: Planet Hunters</br></center>
+		<p>
+		Specifically, the transit depth is equal to the ratio between the planet's radius (<i>R<sub>p</sub></i>) and the star's radius (<i>R<sub>*</sub></i>) squared:
+		
+		<center><img src="rprs.png" /></center>
+		
+		
+		<p> Meaning that the planet's radius can be found using the following formula: 
+		<center><img src="rpdepth.png" /></center>
+		</p>
+		<p>
+		Click the link to continue onto <a href = 'tutorial2.html'>Page 2</a>. 
+		</p>
+		
+		
+		
+        </div> </div> </div> <div id="footer"> </div> </div>
+
+
+</body></html>

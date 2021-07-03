@@ -1,0 +1,152 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> <html
+xmlns="http://www.w3.org/1999/xhtml"><head> <meta
+http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Transit Light Curve Tutorial</title> <link
+href="../defaultstyles1.css" rel="stylesheet"
+media="screen"> <script type="text/javascript" async=""
+src="../ga.js"></script><script type="text/javascript"
+src="../branding.js"></script> <script
+type="text/JavaScript" src="../curvycorners.js"></script>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || []; _gaq.push(['_setAccount', 'UA-37759371-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() { var ga = document.createElement('script'); ga.type =
+  'text/javascript'; ga.async = true; ga.src = ('https:' ==
+  document.location.protocol ? 'https://ssl' : 'http://www') +
+  '.google-analytics.com/ga.js'; var s =
+  document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(ga, s);
+  })();
+  }
+</script> </head>
+
+<body> <div id="container"> <br> <div id="wrapper"> <div id="banner">
+<h1>Transit Light Curve Tutorial</h1> <p><a
+href="../index.html" style="color:
+#FFFFFF; font-size: 12pt; text-transform:none">Andrew Vanderburg
+</a></p><br><br><br><br><br>
+<br><br> </div> <div id="nav"> <ul> <li><a
+href="tutorial.html">Introduction</a></li>
+<li><a
+href="tutorial2.html">Transit Light Curves</a></
+li> <li><a
+href="tutorial3.html">Accessing and Downloading <i>Kepler</i> Data</a></li>
+<li><a
+href="tutorial4.html">Analyzing <i>Kepler</i> Data </a></li>
+
+
+
+
+        </ul> </div> <div id="page">
+
+        <div id="content">
+        <br>
+
+        <center><h1>Accessing and Downloading <i>Kepler</i> Data</h1></center>
+<br>
+        <p>This section will describe how to access public data from the <i>Kepler</i> space telescope, in particular data from its extended K2 mission. These light curves are ultra-high precision, and almost certainly have undiscovered planets hiding, waiting to be unearthed by a careful eye. During the K2 mission, Kepler looked at stars for about 80 days at a time.<!-- K2 data also has more data quirks and glitches than data from the original <i>Kepler</i> mission. -->
+        
+        </p> 
+<!--         <center><h2>Downloading K2 Data</h2></center> -->
+        <p>
+        Data taken by <i>Kepler</i> in the K2 mission is easily accessed and downloadable from various sites on the internet. If you don't have a particular star in mind, and just want to look for planets, or anything else interesting in the dataset, the easiest way to access K2 data is through <a href='https://www.cfa.harvard.edu/~avanderb/k2.html'>this portal</a>. Once arriving at this webpage, and after scrolling down a bit, there are large links with labels like "Explore Campaign 10 data here" for the various different "campaigns", or periods of observations conducted by K2. </p>
+        
+        <center><img src='k2htmlpage.png' width=900></center>
+        
+        <p>These links exist for most K2 campaigns (excluding Campaign 9, which was dedicated to a microlensing experiment and was broken into two halves. These light curves are still available online, just not in as easy a format to access). Clicking on one of these links takes you to a list of stars observed by K2, all listed by their Ecliptic Plane Input Catalog, or EPIC, identifier. </p>
+        
+        
+        <center><img src='k2listepics.png' width=900></center>
+        <p>
+        Clicking on any of these links leads to a page with plots of the K2 data, and links to download the data for that particular star. The link called "Corrected Light Curve" leads to a text file which can be read by software like Google Spreadsheet, Microsoft Excel, or <a href='https://plot.ly/export/'>plot.ly</a></p>
+        
+        
+        <center><img src='cfapage.png' width=900></center>
+        
+        <p>On the other hand, if you have a particular star, or a particular position in the sky in mind, a <a href='https://archive.stsci.edu/k2/hlsp/k2sff/search.php'>search form is available</a>. You can search by the name of the star as shown below: </p>
+        
+        <center><img src='searchname.png' width=900></center>
+        
+        <p>
+        One can also search for K2 data of a particular star or stars near sky coordinates as shown below: 
+        </p>
+        
+        <center><img src='searchcoords.png' width=900></center>
+        
+        <p>
+        The most common way to search for stars with K2 data is by using the star's K2 identifier, or EPIC ID. It is possible to search for stars by their EPIC IDs using this search form as well. 
+                </p>
+                
+        
+        <center><img src='searchepic.png' width=900></center>
+        <p>
+        Once a search query has been entered, pressing the "Search" button in the top left will bring up a results page. 
+        
+        </p>
+        <center><img src='searchresults.png' width=900></center>
+        <p>
+        
+        Clicking the link highlighted in red brings up a webpage with plots to view the data and links to download the data and figures. The link called "Corrected Light Curve" leads to a text file which can be read by software like Google Spreadsheet, Microsoft Excel, or <a href='https://plot.ly/export/'>plot.ly</a></p>
+        
+        
+        <center><img src='hlsppage.png' width=900></center>
+        
+         
+        
+        </p> 
+ <!--       <center><h2>Downloading <i>Kepler</i> Data</h2></center>
+        <p>
+        Downloading data from the original <i>Kepler</i> mission is more difficult than it is for K2 data, so we will not focus on it in this tutorial. Instead, we will give a brief description of the procedure by which <i>Kepler</i> data can be downloaded and accessed using freely available software an refer the reader to other webpages describing the steps in more detail. </p>
+        
+       <p> <i>Kepler</i> data can be downloaded from various different websites, but the most convenient way to download it is to use an interface provided by the<a href='http://exoplanetarchive.ipac.caltech.edu/applications/ETSS/Kepler_index.html'>NASA Exoplanet Archive</a>. After clicking on the preceding link, one is taken to a page with a search form. Enter the Kepler identifier, also known as the Kepler Input Catalog or KIC identifier, and click "View."</p>
+       
+       <center><img src='nexscisearch.png' width=900></center>
+       
+       <p>
+       
+       Completing this search brings up a results page, with links to the various datasets. To view the light curves in an online interface, click the links to the "PDCSAP Time Series" for the various subsets of the Kepler dataset. </p>
+       
+       <center><img src='nexscidownload1.png' width=900></center>
+       <p>
+       This brings up an interactive plot window, with the Kepler data in different colors. Zooming in on the different subsets makes features in the dataset visible. </p>
+       
+       <center><img src='nexsciplot.png' width=900></center>
+       
+       <p>
+       If one wants to download the Kepler data instead of plotting, click the link called "Generate Download Scripts," as shown below:
+       
+       </p>
+       
+       <center><img src='nexscidownload2.png' width=900></center>
+       
+       <p>
+       
+       This will take you to a new page which, after a while, will give you a download link to a file known as a "wget script." Wget is a program that downloads files from the internet, and which should come natively installed on any Linux or Mac operating system. To run the file, open a command prompt in the same directory as the file and type ".sh filename.dat" or ". filename.dat", replacing "filename" with the name of your downloaded file. This will automatically download the <i>Kepler</i> data to that directory. </p>
+       
+       <p>It may be more difficult to use a wget script on a Windows operating system, although there appear to be solutions, for example <a href='http://gnuwin32.sourceforge.net/packages/wget.htm'>wget for windows</a>. If such solutions do not work, windows users may download the data manually, by opening the wget script in Notepad, and identifying lines of the script that call wget. These lines have the form: </p>
+       
+       <blockquote>
+       <code><b>
+       wget -O 'kplr010666592-2009131105131_llc.fits' 'http://exoplanetarchive.ipac.caltech.edu:80/data/ETSS//Kepler/005/141/63/kplr010666592-2009131105131_llc.fits' -a search_442002408.log
+       </b></code>      
+      </blockquote>
+       
+      <p> Extracting the web address "<b><code>http://exoplanetarchive.ipac.caltech.edu:80/data/ETSS//Kepler/005/141/63/kplr010666592-2009131105131_llc.fits</code></b>" from that line and pasting it into the address bar of your web browser will let you download the file. </p>
+       The files containing the <i>Kepler</i> light curves are in a format called FITS. These files are commonly used in astronomy, but difficult to open. A tutorial on <a href='https://keplergo.arc.nasa.gov/DataAnalysisInspectionLC.shtml'>this webpage</a> describes how to use a program called <a href='http://www.star.bris.ac.uk/~mbt/topcat/'>TOPCAT</a> to convert the FITS files to text files which can be opened with spreadsheet editors like Google Spreadsheets. 
+        
+     
+        </p>-->
+		
+		<p>
+		Continue onto <a href = 'tutorial4.html'> Page 4 </a>. 
+		</p>
+		
+		
+        </div> </div> </div> <div id="footer"> </div> </div>
+
+
+</body></html>
