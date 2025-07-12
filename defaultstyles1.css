@@ -25,7 +25,7 @@ body {
 
 /*Originally the width was 960 px */
 #container {
-	width:960px;
+	max-width:960px;
 	margin:auto;
 	font-size:14px;
 	position: relative;
@@ -45,12 +45,12 @@ body {
 #banner {
 	color:#FFF;
 	padding:15px;
-	
+	height:174px;
 	
 	
 	background-color:#FFF;
 	margin:0;
-	background-image: url(images/ArcMW_hallas_alt_small_flip.png);
+	background-image: url(images/ArcMW_hallas_alt_small_flip.jpg);
 }
 h1 {
 	margin:0;
@@ -190,3 +190,124 @@ h2 {
 /* .contentbar3 {display:none}  */
 /* .contentbar4 {display:none}  */
 /* .contentbar5 {display:none}  */
+
+/* ==========================================================================
+   Responsive Styles for Mobile
+   ========================================================================== */
+
+/* CSS for Responsive Video Embeds */
+.video-container {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+}/*    width: 100%;*/
+
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+.video-container-medium {
+    max-width: 853px;
+}
+
+.video-container-teaching {
+    max-width: 800px;
+}
+
+.video-container-small {
+    max-width: 560px;
+}
+
+.pdf-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;  /* desktop limit */
+  aspect-ratio: 8.5 / 11;  /* standard US letter paper ratio */
+  margin: 0 auto;  /* center horizontally */
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.pdf-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+.profile {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 2em;
+  align-items: center; /* This centers image and text vertically */
+  padding: 0 5%;
+}
+
+.profile-image {
+  flex: 0 0 300px;
+}
+
+.profile-text {
+  flex: 1;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    #nav {
+        height: auto; 
+    }
+
+    /* Make navigation items wrap instead of stacking vertically */
+    #nav ul li {
+        display: inline-block; /* Allows items to be side-by-side and wrap */
+        float: none;           /* Must remove the float for wrapping to work */
+    }
+
+    /* Adjust content margin for a better mobile view */
+    #content {
+        margin: 15px;
+    }
+
+
+    
+    /* Optional: reduce the main heading size on small screens */
+    h1 {
+        font-size: 24px;
+    }
+
+    #banner p {
+        font-size: 10pt; /* Adjust font size in the banner */
+    }
+    #content img {
+    float: none !important;      /* Removes the align=right behavior */
+    display: block;              /* Allows for margin auto-centering */
+    margin: 15px auto;           /* Centers the image and adds space */
+    max-width: 100%;             /* Ensures the image never overflows its container */
+    height: auto;                /* Maintains the image's aspect ratio */
+}
+  .profile {
+    flex-direction: column;
+  }
+
+  .profile-text, .profile-image {
+    width: 100%;
+    text-align: left;
+  }
+
+  .profile-text {
+    order: 2;
+  }
+
+  .profile-image {
+    order: 1;
+    text-align: center;
+  }
+}
