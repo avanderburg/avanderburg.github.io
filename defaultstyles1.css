@@ -18,7 +18,8 @@ img { border:none; }
 body {
 	margin:0;
 	padding:0;
-	background-color:#328cc1;
+	background-color:#328cc1; /* #328cc1;*/
+/*    background-image: linear-gradient(to right, #93123C , #343470);*/
 	color:#333;
 	font-family:"Lucida Sans Unicode", "Lucida Grande", Arial, Helvetica, sans-serif;
 }
@@ -286,7 +287,19 @@ h2 {
     #banner p {
         font-size: 10pt; /* Adjust font size in the banner */
     }
-    #content img {
+    #sidebar {
+    float: none;
+    width: auto;
+    margin: 15px;
+}
+
+#sidebar #fac_photo {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box; /* This is the key */
+}
+    
+#content img, #sidebar img {
     float: none !important;      /* Removes the align=right behavior */
     display: block;              /* Allows for margin auto-centering */
     margin: 15px auto;           /* Centers the image and adds space */
@@ -310,4 +323,6 @@ h2 {
     order: 1;
     text-align: center;
   }
+  
+
 }
